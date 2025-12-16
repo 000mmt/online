@@ -1,1 +1,228 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureVote | Trusted Online Voting</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+
+    body { background: #f4f6f9; color: #1f2937; }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 { font-size: 26px; font-weight: 700; }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 28px;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      font-size: 18px;
+      color: #4b5563;
+      line-height: 1.6;
+    }
+
+    .hero a {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .hero a.secondary {
+      background: #e5e7eb;
+      color: #1f2937;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section h3 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .section p.section-desc {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 48px;
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 32px;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .feature-card h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .feature-card p {
+      color: #6b7280;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .cta h3 { font-size: 34px; margin-bottom: 16px; }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 32px;
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    .cta a {
+      background: white;
+      color: #1e40af;
+      padding: 14px 36px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SecureVote</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="vote.html">Vote</a>
+    <a href="results.html">Results</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Trust. Transparency. Your Vote Matters.</h2>
+  <p>
+    SecureVote is a modern online voting platform designed to make elections
+    simple, accessible, and trustworthy. Whether it's a student election,
+    organizational vote, or public poll, SecureVote ensures every voice counts.
+  </p>
+  <a href="vote.html">Start Voting</a>
+  <a href="login.html" class="secondary">Sign In</a>
+</section>
+
+<section class="section">
+  <h3>Why Choose SecureVote?</h3>
+  <p class="section-desc">
+    We combine simplicity with reliability to deliver a voting experience
+    people can trust.
+  </p>
+
+  <div class="features">
+    <div class="feature-card">
+      <h4>Simple & Accessible</h4>
+      <p>
+        Vote from any device, anywhere. Our platform is optimized for
+        mobile, tablet, and desktop use.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Transparent Results</h4>
+      <p>
+        Live vote counts and clear results ensure complete transparency
+        throughout the election process.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Controlled Access</h4>
+      <p>
+        Only registered users can vote, helping prevent duplicate or
+        unauthorized participation.
+      </p>
+    </div>
+
+    <div class="feature-card">
+      <h4>Fast & Reliable</h4>
+      <p>
+        Built on modern infrastructure to handle high traffic while
+        remaining fast and responsive.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h3>Be Part of the Decision</h3>
+  <p>
+    Your participation shapes outcomes. Join SecureVote today and
+    experience a smarter way to vote.
+  </p>
+  <a href="login.html">Get Started</a>
+</section>
+
+<footer>
+  © 2025 SecureVote Platform. All rights reserved.
+</footer>
+
+</body>
+  </html>
