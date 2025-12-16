@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureVote | Online Voting Platform</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f4f6f9;
+      color: #1f2937;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e40af, #2563eb);
+      color: white;
+      padding: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .candidates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .vote-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .votes {
+      font-weight: 600;
+      color: #1e40af;
+    }
+
+    .vote-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .vote-btn:hover {
+      background: #1e40af;
+    }
+
+    footer {
+      margin-top: 60px;
+      background: #111827;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SecureVote</h1>
+  <nav>
+    <a href="harking.html">Home</a>
+    <a href="#">Results</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="intro">
+    <h2>Cast Your Vote</h2>
+    <p>Select your preferred candidate below. You must sign in before voting.</p>
+  </div>
+
+  <section class="candidates">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Candidate 1">
+      <div class="card-content">
+        <h3>Alex Johnson</h3>
+        <p>Candidate for President</p>
+        <div class="vote-info">
+          <span class="votes">Votes: 1,245</span>
+          <a href="login.html" class="vote-btn">Vote</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12" alt="Candidate 2">
+      <div class="card-content">
+        <h3>Maria Gonzalez</h3>
+        <p>Candidate for President</p>
+        <div class="vote-info">
+          <span class="votes">Votes: 1,102</span>
+          <a href="login.html" class="vote-btn">Vote</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39" alt="Candidate 3">
+      <div class="card-content">
+        <h3>Samuel Lee</h3>
+        <p>Candidate for President</p>
+        <div class="vote-info">
+          <span class="votes">Votes: 986</span>
+          <a href="login.html" class="vote-btn">Vote</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<footer>
+  © 2025 SecureVote Platform. All rights reserved.
+</footer>
+
+</body>
+</html>
