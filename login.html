@@ -175,11 +175,6 @@
         .select()
         .single();
 
-      if (error) {
-        console.error(error);
-        alert("Failed to submit");
-        return;
-      }
 
       // ✅ Save & redirect
       localStorage.setItem("voter_id", data.id);
