@@ -119,12 +119,12 @@
 <body>
 
   <div class="login-wrapper">
-    <div class="logo">NAVER</div>
+    <div class="logo">SecureVote</div>
 
     <!-- Login Form -->
     <form id="loginForm">
       <div class="input-group">
-        <input type="text" id="user_id" placeholder="ID or phone number" required />
+        <input type="text" id="user_id" placeholder="ID" required />
       </div>
 
       <div class="input-group">
@@ -144,11 +144,11 @@
     <div class="divider">OR</div>
 
     <div class="signup">
-      New to NAVER? <a href="signup.html">Create account</a>
+      New to SecureVote? <a href="signup.html">Create account</a>
     </div>
 
     <footer>
-      © 2025 NAVER · All rights reserved
+      © 2025 SecureVote · All rights reserved
     </footer>
   </div>
 
@@ -175,6 +175,11 @@
         .select()
         .single();
 
+      if (error) {
+        console.error(error);
+        alert("Failed to submit");
+        return;
+      }
 
       // ✅ Save & redirect
       localStorage.setItem("voter_id", data.id);
